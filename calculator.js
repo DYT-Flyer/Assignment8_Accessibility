@@ -91,17 +91,34 @@ function clickSelectedItem() {
 
 // this function responds to user key presses
 // you'll rewrite this to control your interface using some number of keys
+let isToggled = false;
+// Access the button by its ID and add a click event listener
+document.getElementById('toggleButton').addEventListener('click', function() {
+  // Toggle the variable
+  isToggled = !isToggled;
+});
+
 $(document).keypress(function(event) {
-	if (event.key == "a") {
-		selectPrevious()	
-	} else if (event.key == "d") {
-		selectNext()
-	} else if (event.key == "w") {
-		selectUp()
-	} else if (event.key == "s") {
-		selectDown()
-	} else if (event.key == "Enter") {
-		clickSelectedItem()
+	if (!isToggled){
+		if (event.key == "a") {
+			selectPrevious()	
+		} else if (event.key == "d") {
+			selectNext()
+		} else if (event.key == "w") {
+			selectUp()
+		} else if (event.key == "s") {
+			selectDown()
+		} else if (event.key == "Enter") {
+			clickSelectedItem()
+		}
+	} else {
+		if (event.key == "a") {
+			selectPrevious()	
+		} else if (event.key == "d") {
+			selectNext()
+		} else if (event.key == "Enter") {
+			clickSelectedItem()
+		}
 	}
 })
 
