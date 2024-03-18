@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="calculator.css" type="text/css">
 	</head>
 	<body>
-		<button id='toggleButton'>5Key</button>
+		<button id='toggleButton'>Change Key Bindings</button>
 		<div id="calculator">
 			<h1>calc U l8r</h1>
 			<div class="calculator_row">
@@ -62,7 +62,6 @@
 			document.getElementById('toggleButton').addEventListener('click', function() {
 				var content1 = document.getElementById('3Key');
 				var content2 = document.getElementById('5Key');
-				var btn = document.getElementById('toggleButton');
 				isToggled = !isToggled;
 				// Check the display style of content1 to determine the toggle state
 				if (content1.style.display === 'none') {
