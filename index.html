@@ -52,5 +52,20 @@
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
 		<script src="calculator.js" type="text/javascript"></script>
+		<script>
+			document.getElementById('toggleButton').addEventListener('click', function() {
+				var content1 = document.getElementById('content1');
+				var content2 = document.getElementById('content2');
+				// Check the display style of content1 to determine the toggle state
+				if (content1.style.display === 'none') {
+					content1.style.display = 'block';
+					content2.style.display = 'none';
+				} else {
+					content1.style.display = 'none';
+					content2.style.display = 'block';
+				}
+			});
+		</script>
+
 	</body>
 </html>
