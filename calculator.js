@@ -92,11 +92,6 @@ function clickSelectedItem() {
 // this function responds to user key presses
 // you'll rewrite this to control your interface using some number of keys
 let isToggled = false;
-// Access the button by its ID and add a click event listener
-document.getElementById('toggleButton').addEventListener('click', function() {
-  // Toggle the variable
-  isToggled = !isToggled;
-});
 
 $(document).keypress(function(event) {
 	if (!isToggled){
